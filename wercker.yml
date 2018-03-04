@@ -8,7 +8,7 @@ box: node
 build:
   steps:
     - npm-install
-    # A step that executes `npm test` command
+    # A step that executes `npm test` command 
     #- npm-test
 
     # A custom script step, name value is used in the UI
