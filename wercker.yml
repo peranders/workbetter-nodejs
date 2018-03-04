@@ -7,7 +7,7 @@ box: node
 
 build:
   steps:
-    - npm-install:
+    - npm-install
     # A step that executes `npm test` command 
     #- npm-test
 
