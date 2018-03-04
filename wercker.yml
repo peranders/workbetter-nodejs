@@ -28,4 +28,4 @@ push-image-to-dockerhub:
         cmd: npm start
         ports: "8085"
         repository: peraj/workbetter-nodejs
-        registry: https://registry.hub.docker.com
+        registry: https://registry.hub.docker.com/v2
