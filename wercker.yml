@@ -7,8 +7,7 @@ box: node
 
 build:
   steps:
-    - npm-install
-      cwd: app/
+    - npm-install:
     # A step that executes `npm test` command 
     #- npm-test
 
@@ -19,6 +18,7 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
+          
         
 push-image-to-dockerhub:
   steps:
@@ -27,7 +27,6 @@ push-image-to-dockerhub:
         password: $DOCKER_PASSWORD
         tag: $WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
         cmd: npm start
-        working-dir: /app
         ports: "8085"
         repository: peraj/workbetter-nodejs
         registry: https://registry.hub.docker.com/v2
